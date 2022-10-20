@@ -13,4 +13,4 @@ dependencyResolutionManagement {
     }
 }
 rootProject.name = "Android-Components"
-include ':app'
+include ':about-us'

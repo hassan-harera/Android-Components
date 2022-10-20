@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="company_profile">ملف الشركة</string>
+    <string name="company_profile_details">اكتب هنا</string>
+    <string name="company_goal">هدفنا</string>
+    <string name="company_goal_details">اكتب هنا</string>
+    <string name="about_us">عنا</string>
+</resources>

@@ -1,0 +1,39 @@
+apply plugin: 'com.android.library'
+apply plugin: 'kotlin-android'
+apply plugin: 'kotlin-kapt'
+apply from: "$rootDir/${CommonBuild.TESTING_MODULE}"
+apply from: "$rootDir/${CommonBuild.UI_TESTING_MODULE}"
+
+android {
+    compileSdkVersion DefaultConfig.compileSdk
+
+    defaultConfig {
+        minSdkVersion DefaultConfig.minSdk
+        targetSdkVersion DefaultConfig.targetSdk
+        versionCode Releases.versionCode
+        versionName Releases.versionName
+    }
+    buildFeatures{
+        viewBinding true
+    }
+
+    defaultConfig {
+        testInstrumentationRunner "io.philippeboisney.common_test.FakeRunner"
+    }
+}
+
+dependencies {
+    implementation(Libs.coroutinesCore)
+
+    implementation(Libs.appcompat)
+    implementation(Libs.activity)
+    implementation(Libs.fragments)
+    implementation(Libs.navigationFragment)
+
+    implementation Libs.liveData
+    implementation Libs.androidxCore
+
+    implementation Libs.materialDesign
+    implementation Libs.lifeCycleRuntime
+
+}
